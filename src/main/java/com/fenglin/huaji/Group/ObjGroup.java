@@ -15,4 +15,14 @@ public class ObjGroup extends ItemGroup {
         return new ItemStack(ItemRegistry.HUAJI.get());
     }
 
+    @Override
+    public boolean hasSearchBar() {
+        return true;
+    }
+
+    @Override
+    public net.minecraft.util.ResourceLocation getBackgroundImage() {
+        //if (backgroundLocation != null) return backgroundLocation; //FORGE: allow custom namespace
+        return new net.minecraft.util.ResourceLocation("huaji:textures/gui/container/creative_inventory/tab_items.png");
+    }
 }
