@@ -1,8 +1,8 @@
 com/fenglin/huaji/Item/objhuaji.java
  com.fenglin.huaji.Item.objhuaji
-com/fenglin/huaji/Item/ItemRegistry.java
- com.fenglin.huaji.Item.ItemRegistry
 com/fenglin/huaji/Utils.java
  com.fenglin.huaji.Utils
+com/fenglin/huaji/Item/ItemRegistry.java
+ com.fenglin.huaji.Item.ItemRegistry
 com/fenglin/huaji/huaji.java
  com.fenglin.huaji.huaji

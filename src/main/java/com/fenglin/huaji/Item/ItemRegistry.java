@@ -8,6 +8,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Utils.MOD_ID);
-    public static final RegistryObject<Item> HUAJI = ITEMS.register("item_huaji", objhuaji::new);
+    public static final RegistryObject<Item> HUAJI = ITEMS.register("huaji", objhuaji::new);
 
 }
