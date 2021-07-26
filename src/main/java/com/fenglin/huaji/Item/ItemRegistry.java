@@ -1,6 +1,6 @@
 package com.fenglin.huaji.Item;
 
-import com.fenglin.block.BlockRegistry;
+import com.fenglin.huaji.block.BlockRegistry;
 import com.fenglin.huaji.Group.ModGroup;
 import com.fenglin.huaji.Utils;
 import net.minecraft.item.BlockItem;

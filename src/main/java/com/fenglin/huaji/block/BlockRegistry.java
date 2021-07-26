@@ -1,4 +1,4 @@
-package com.fenglin.block;
+package com.fenglin.huaji.block;
 
 import com.fenglin.huaji.Utils;
 import net.minecraft.block.Block;
