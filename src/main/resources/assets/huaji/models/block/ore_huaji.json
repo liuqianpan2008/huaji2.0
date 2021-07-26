@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "huaji:block/ore_huaji"
+  }
+}
