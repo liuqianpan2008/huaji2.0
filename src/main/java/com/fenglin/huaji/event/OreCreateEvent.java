@@ -15,6 +15,6 @@ public class OreCreateEvent {
             return;
 
         biome.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES)
-                .add(() -> Ore.ORE_COPPER_CONFIG);
+                .add(() -> Ore.ORE_HUAJI);
     }
 }

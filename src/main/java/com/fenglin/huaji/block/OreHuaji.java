@@ -6,6 +6,13 @@ import net.minecraftforge.common.ToolType;
 
 public class OreHuaji extends Block {
     public OreHuaji() {
-        super(Properties.of(Material.DECORATION).harvestLevel(3).harvestTool(ToolType.PICKAXE));
+        super(Properties.of(Material.DECORATION)
+                .harvestLevel(3)
+                .strength(3.0f,3.0f)
+                .requiresCorrectToolForDrops()
+                .of(Material.STONE)
+                .strength(30)
+
+        );
     }
 }

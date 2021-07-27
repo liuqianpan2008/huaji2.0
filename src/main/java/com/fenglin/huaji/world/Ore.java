@@ -11,7 +11,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Ore {
-    public static ConfiguredFeature<?, ?> ORE_COPPER_CONFIG;
+    public static ConfiguredFeature<?, ?> ORE_HUAJI;
 
     /**
      * BASE_STONE_OVERWORLD 主世界
@@ -20,7 +20,7 @@ public class Ore {
      */
     @SubscribeEvent
     public static void setup(FMLCommonSetupEvent event) {
-        ORE_COPPER_CONFIG = Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, "ore_malachite",
+        ORE_HUAJI = Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, "ore_malachite",
                 Feature.ORE.configured(
                         new OreFeatureConfig(
                                 OreFeatureConfig.FillerBlockType.NATURAL_STONE,

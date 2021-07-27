@@ -14,5 +14,5 @@ public class ItemRegistry {
     public static final RegistryObject<Item> HUAJI = ITEMS.register("huaji", objhuaji::new);
 
     public static final RegistryObject<Item> ORE_HUAJI = ITEMS.register("ore_huaji", () -> new BlockItem(BlockRegistry.ORK_HUAJI.get(), new Item.Properties().tab(ModGroup.itemGroup)));
-
+    public static final RegistryObject<Item> FURNACE_HUAJI = ITEMS.register("furnace_huaji", () -> new BlockItem(BlockRegistry.FURNACEHUAJI.get(), new Item.Properties().tab(ModGroup.itemGroup)));
 }
