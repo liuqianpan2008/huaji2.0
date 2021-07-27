@@ -6,6 +6,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
@@ -37,15 +38,13 @@ public class FurnaceHuaji extends Block {
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
         return new FurnaceEntity();
     }
-    //onBlockActivated
     @Override
     public ActionResultType use(BlockState p_225533_1_, World p_225533_2_, BlockPos p_225533_3_, PlayerEntity p_225533_4_, Hand p_225533_5_, BlockRayTraceResult p_225533_6_) {
-        //isRemote
         if (!p_225533_2_.isClientSide && p_225533_5_ == Hand.MAIN_HAND) {
             FurnaceEntity FurnaceEntity = (FurnaceEntity) p_225533_2_.getBlockEntity(p_225533_3_);
-            int counter = FurnaceEntity.increase();
-            TranslationTextComponent translationTextComponent = new TranslationTextComponent("message.neutrino.counter", counter);
-            p_225533_4_.sendMessage(translationTextComponent,p_225533_4_.getUUID());
+            NetworkHooks.openGui((ServerPlayerEntity) p_225533_4_, (INamedContainerProvider) FurnaceEntity, (PacketBuffer packerBuffer) -> {
+                packerBuffer.writeBlockPos(FurnaceEntity.getBlockPos());
+            });
         }
         return ActionResultType.SUCCESS;
     }
