@@ -2,7 +2,6 @@ package com.fenglin.huaji;
 
 import com.fenglin.huaji.block.BlockRegistry;
 import com.fenglin.huaji.Item.ItemRegistry;
-import com.fenglin.huaji.block.FurnaceHuaji.ContainerTypeRegistry;
 import com.fenglin.huaji.block.TileEntityTypeRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
