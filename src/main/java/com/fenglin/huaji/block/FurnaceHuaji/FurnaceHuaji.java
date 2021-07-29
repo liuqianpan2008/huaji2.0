@@ -42,9 +42,10 @@ public class FurnaceHuaji extends Block {
     public ActionResultType use(BlockState p_225533_1_, World p_225533_2_, BlockPos p_225533_3_, PlayerEntity p_225533_4_, Hand p_225533_5_, BlockRayTraceResult p_225533_6_) {
         if (!p_225533_2_.isClientSide && p_225533_5_ == Hand.MAIN_HAND) {
             FurnaceEntity FurnaceEntity = (FurnaceEntity) p_225533_2_.getBlockEntity(p_225533_3_);
-            NetworkHooks.openGui((ServerPlayerEntity) p_225533_4_, (INamedContainerProvider) FurnaceEntity, (PacketBuffer packerBuffer) -> {
+            /*NetworkHooks.openGui((ServerPlayerEntity) p_225533_4_, (INamedContainerProvider) FurnaceEntity, (PacketBuffer packerBuffer) -> {
                 packerBuffer.writeBlockPos(FurnaceEntity.getBlockPos());
-            });
+            });*/
+            System.out.println("GUI");
         }
         return ActionResultType.SUCCESS;
     }

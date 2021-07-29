@@ -6,8 +6,7 @@ import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.Style;
-import org.jetbrains.annotations.Nullable;
+
 
 public class FurnacehuajiScreen extends ContainerScreen<Gui_furnacehuaji> {
     private final ResourceLocation OBSIDIAN_CONTAINER_RESOURCE = new ResourceLocation(Utils.MOD_ID, "textures/gui/container.png");

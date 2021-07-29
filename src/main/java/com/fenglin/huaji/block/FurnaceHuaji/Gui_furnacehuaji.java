@@ -1,25 +1,20 @@
 package com.fenglin.huaji.block.FurnaceHuaji;
 
 
-import com.fenglin.huaji.block.FurnaceHuaji.FirstContainerItemNumber;
-import com.fenglin.huaji.block.FurnaceHuaji.FurnaceEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
 public class Gui_furnacehuaji extends Container {
     private  FirstContainerItemNumber intArray;
 
     protected Gui_furnacehuaji(int id, PlayerInventory playerInventory, BlockPos pos, World world, FirstContainerItemNumber intArray) {
-        //super(ContainerTypeRegistry.obsidianFirstContainer.get(), id);
-        super(null,id);
+        super(ContainerTypeRegistry.Gui_furnacehuaji.get(),id);
         this.intArray = intArray;
         addDataSlots(this.intArray);
         FurnaceEntity FurnaceEntity = (FurnaceEntity) world.getBlockEntity(pos);
