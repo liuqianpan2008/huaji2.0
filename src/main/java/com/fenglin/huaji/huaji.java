@@ -2,7 +2,8 @@ package com.fenglin.huaji;
 
 import com.fenglin.huaji.block.BlockRegistry;
 import com.fenglin.huaji.Item.ItemRegistry;
-import com.fenglin.huaji.block.TileEntityTypeRegistry;
+import com.fenglin.huaji.block.FurnaceHuaji.ContainerTypeRegistry;
+import com.fenglin.huaji.block.FurnaceHuaji.TileEntityTypeRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
@@ -12,6 +13,6 @@ public class huaji {
         ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         BlockRegistry.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         TileEntityTypeRegistry.TILE_ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
-        //ContainerTypeRegistry.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ContainerTypeRegistry.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }

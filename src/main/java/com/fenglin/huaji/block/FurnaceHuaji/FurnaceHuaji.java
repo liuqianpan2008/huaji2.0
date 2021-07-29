@@ -6,6 +6,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.inventory.container.DispenserContainer;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.tileentity.TileEntity;
@@ -21,7 +22,6 @@ import net.minecraftforge.fml.network.NetworkHooks;
 import javax.annotation.Nullable;
 
 public class FurnaceHuaji extends Block {
-
     public FurnaceHuaji() {
         super(Properties
                 .of(Material.STONE)
@@ -33,18 +33,21 @@ public class FurnaceHuaji extends Block {
     public boolean hasTileEntity(BlockState state) {
         return true;
     }
+
     @Nullable
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return new FurnaceEntity();
+        return TileEntityTypeRegistry.HUAJI_FURNACE.get().create();
     }
+    @SuppressWarnings("deprecation")
     @Override
     public ActionResultType use(BlockState p_225533_1_, World p_225533_2_, BlockPos p_225533_3_, PlayerEntity p_225533_4_, Hand p_225533_5_, BlockRayTraceResult p_225533_6_) {
         if (!p_225533_2_.isClientSide && p_225533_5_ == Hand.MAIN_HAND) {
+
             FurnaceEntity FurnaceEntity = (FurnaceEntity) p_225533_2_.getBlockEntity(p_225533_3_);
-            /*NetworkHooks.openGui((ServerPlayerEntity) p_225533_4_, (INamedContainerProvider) FurnaceEntity, (PacketBuffer packerBuffer) -> {
+        NetworkHooks.openGui((ServerPlayerEntity) p_225533_4_, FurnaceEntity, (PacketBuffer packerBuffer) -> {
                 packerBuffer.writeBlockPos(FurnaceEntity.getBlockPos());
-            });*/
+            });
             System.out.println("GUI");
         }
         return ActionResultType.SUCCESS;

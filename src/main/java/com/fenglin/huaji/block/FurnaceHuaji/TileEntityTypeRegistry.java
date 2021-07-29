@@ -1,6 +1,7 @@
-package com.fenglin.huaji.block;
+package com.fenglin.huaji.block.FurnaceHuaji;
 
 import com.fenglin.huaji.Utils;
+import com.fenglin.huaji.block.BlockRegistry;
 import com.fenglin.huaji.block.FurnaceHuaji.FurnaceEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
